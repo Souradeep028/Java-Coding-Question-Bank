@@ -35,7 +35,7 @@ const summary = () => {
   table.innerHTML = `
   
   <div id="stats" style="display: flex; justify-content: space-evenly; margin-bottom: 1rem;">
-    <h6>Question : <span id="questionNumber">${questionCounter} / ${easyQuestions.length}</span></h6>
+    <h6>Question : <span id="questionNumber">${questionCounter-1} / ${easyQuestions.length}</span></h6>
     <h6>Solved : <span id="solvedCounter">${solvedCounter}</span></h6>
     <h6>Unsolved : <span id="unsolvedCounter">${unsolvedCounter}</span></h6>
   </div>
