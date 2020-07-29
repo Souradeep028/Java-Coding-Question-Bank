@@ -21,10 +21,16 @@
             <h6>Unsolved : <span id="unsolvedCounter">0</span></h6>
         </div>
         <h5 id="question" style="text-align: center; margin-bottom: 4rem;"></h5>
-        <div id="buttons" style="display: flex; justify-content: space-evenly;">
-            <button id="unsolved" class="btn btn-primary">Unsolved Question</button>
-            <button id="solved" class="btn btn-primary">Solved Question</button>
+        <div id="buttons">
+            <div style="display: flex; justify-content: space-evenly;">
+                <button id="unsolved" class="btn btn-primary">Couldn't solve</button>
+                <button id="solved" class="btn btn-primary">Solved</button>
+            </div>
+            <div style="display: flex; justify-content: center; margin-top: 4rem;">
+                <button id="summary" class="btn btn-primary">View summary</button>
+            </div>
         </div>
+        <div id="table"></div>
     </div>
 </body>
 
