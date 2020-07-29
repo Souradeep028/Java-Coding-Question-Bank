@@ -23,25 +23,35 @@ const summary = () => {
   question.innerHTML = "Your summary";
   buttons.style.display = "none";
   stats.style.display = "none";
+
+  const rows = unsolvedQuestions.map(
+    (question) =>
+      `    <tr>
+                <th scope="row">${question + 1}</th>
+                <td>${easyQuestions[question]}</td>
+           </tr>`
+  ).join('');
+
   table.innerHTML = `
+  
+  <div id="stats" style="display: flex; justify-content: space-evenly; margin-bottom: 1rem;">
+    <h6>Question : <span id="questionNumber">${questionCounter} / ${easyQuestions.length}</span></h6>
+    <h6>Solved : <span id="solvedCounter">${solvedCounter}</span></h6>
+    <h6>Unsolved : <span id="unsolvedCounter">${unsolvedCounter}</span></h6>
+  </div>
+
   <table class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Question</th>
+      <th scope="col">Unsolved Questions</th>
     </tr>
   </thead>
   <tbody>
-  ${unsolvedQuestions.map(
-    (question) =>
-      `    <tr>
-                <th scope="row">${question+1}</th>
-                <td>${easyQuestions[question]}</td>
-           </tr>`
-  )}
-
+    ${rows}
   </tbody>
-</table>`;
+
+  `;
 };
 
 //Display question
